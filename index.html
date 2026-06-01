@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Небольшой опрос 💜</title>
+
+    <meta name="description" content="Небольшой анонимный опрос" />
+
+    <meta name="theme-color" content="#E9E4FF" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-gradient"></div>
+
+    <div class="floating floating-1">
+      <img src="assets/cloud.svg" alt="" />
+    </div>
+
+    <div class="floating floating-2">
+      <img src="assets/stars.svg" alt="" />
+    </div>
+
+    <div class="floating floating-3">
+      <img src="assets/sprout.svg" alt="" />
+    </div>
+
+    <main id="app">
+      <!-- Экран приветствия -->
+      <section id="welcome-screen" class="screen active">
+        <div class="card welcome-card">
+          <div class="welcome-icon">💜</div>
+
+          <h1>Привет</h1>
+
+          <p class="welcome-text">
+            Здесь собраны разные жизненные ситуации и мысли.
+          </p>
+
+          <p class="welcome-text">Нет правильных или неправильных ответов.</p>
+
+          <p class="welcome-text">
+            Выбирай тот вариант, который больше всего подходит тебе.
+          </p>
+
+          <p class="welcome-text">Все ответы сохраняются автоматически.</p>
+
+          <button id="start-btn" class="primary-btn">Начать</button>
+        </div>
+      </section>
+
+      <!-- Экран опроса -->
+      <section id="survey-screen" class="screen">
+        <div class="survey-container">
+          <div class="top-panel">
+            <div class="progress-header">
+              <span id="question-counter"> Вопрос 1 из 63 </span>
+
+              <span id="save-indicator"> ✓ Сохранено </span>
+            </div>
+
+            <div class="progress-track">
+              <div id="progress-bar" class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div id="support-message" class="support-message hidden"></div>
+
+          <div id="question-card" class="card question-card">
+            <div class="question-illustration">🌱</div>
+
+            <div id="question-text" class="question-text">Загрузка...</div>
+          </div>
+
+          <div class="answers">
+            <button class="answer-btn answer-soft" data-value="0">
+              😌 Никогда или редко
+            </button>
+
+            <button class="answer-btn answer-medium" data-value="1">
+              🙂 Иногда
+            </button>
+
+            <button class="answer-btn answer-strong" data-value="2">
+              😟 Часто или всегда
+            </button>
+          </div>
+
+          <div class="navigation">
+            <button id="back-btn" class="secondary-btn">Назад</button>
+
+            <button id="next-btn" class="primary-btn">Далее</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Экран завершения -->
+      <section id="finish-screen" class="screen">
+        <div class="card finish-card">
+          <div class="finish-icon">✨</div>
+
+          <h1>Спасибо за ответы! 💜</h1>
+
+          <p>Твои ответы успешно сохранены.</p>
+
+          <div class="finish-note">🌱 Благодарим за участие.</div>
+        </div>
+      </section>
+    </main>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+      <div class="loading-card">Сохранение...</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
