@@ -7,7 +7,7 @@ const GOOGLE_SCRIPT_URL =
 
 const sourceJson = 
 {
-  "A01": "Я быстро злюсь или у меня случаются более частые либо более сильные вспышки гнева, чем у других девочек моего возраста.",
+  "A01": "Я быстро злюсь. У меня случаются более сильные вспышки гнева, чем у других девочек моего возраста.",
   "A02": "Я часто бываю раздражительной или меня легко вывести из себя.",
   "A03": "Я часто сержусь и легко обижаюсь.",
   "A04": "Я часто спорю со взрослыми.",
@@ -150,8 +150,8 @@ function render() {
             <div class="answers">
               <button class="answer-btn answer-soft" onclick="answer(0)">😌 Совсем нет </button>
               <button class="answer-btn answer-medium" onclick="answer(1)">🙂 Немного </button>
-              <button class="answer-btn answer-medium" onclick="answer(2)">🙂 В значительной степени </button>
-              <button class="answer-btn answer-strong" onclick="answer(3)">😟 Особенно </button>
+              <button class="answer-btn answer-medium" onclick="answer(2)">🙂 В основном </button>
+              <button class="answer-btn answer-strong" onclick="answer(3)">😟 Постоянно </button>
             </div>
         </div>
     `;
