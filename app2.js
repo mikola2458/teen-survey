@@ -109,7 +109,7 @@ const questions = Object.entries(sourceJson).map(([number, text]) => ({
    СОСТОЯНИЕ
 ========================= */
 
-let idx = parseInt(localStorage.getItem("idx") || "1");
+let idx = parseInt(localStorage.getItem("idx") || "0");
 let answers = JSON.parse(localStorage.getItem("answers") || "{}");
 let startTime = parseInt(localStorage.getItem("startTime") || Date.now());
 
@@ -196,7 +196,7 @@ function render() {
 ========================= */
 
 function answer(value) {
-    answers[questions[idx].text] = value;
+    answers[questions[idx].number] = value;
     localStorage.setItem("answers", JSON.stringify(answers));
 
     idx++;
