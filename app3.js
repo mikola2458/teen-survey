@@ -148,12 +148,10 @@ function render() {
                 <div class="question-text">${questions[idx].text}</div>
             </div>
             <div class="answers">
-              <button class="answer-btn answer-soft" onclick="answer(1)" data-value="1">😌 Никогда </button>
-              <button class="answer-btn answer-soft" onclick="answer(2)" data-value="2">😌 Редко </button>
-              <button class="answer-btn answer-medium" onclick="answer(3)" data-value="3">🙂 Иногда </button>
-              <button class="answer-btn answer-medium" onclick="answer(4)" data-value="4">🙂 Часто </button>
-              <button class="answer-btn answer-strong" onclick="answer(5)" data-value="5">😟 Обычно </button>
-              <button class="answer-btn answer-strong" onclick="answer(6)" data-value="6">😟 Всегда </button>
+              <button class="answer-btn answer-soft" onclick="answer(0)">😌 Совсем нет </button>
+              <button class="answer-btn answer-medium" onclick="answer(1)">🙂 Немного </button>
+              <button class="answer-btn answer-medium" onclick="answer(2)">🙂 В значительной степени </button>
+              <button class="answer-btn answer-strong" onclick="answer(3)">😟 Особенно </button>
             </div>
         </div>
     `;
