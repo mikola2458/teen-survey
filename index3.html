@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Небольшой опрос SBB-SSV 💜</title>
+
+    <meta name="description" content="Небольшой анонимный опрос 3" />
+
+    <meta name="theme-color" content="#E9E4FF" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-gradient"></div>
+
+  
+    <main id="app">
+      <!-- Экран приветствия -->
+      <section id="welcome-screen" class="screen active">
+        <div class="card welcome-card">
+          <div class="welcome-icon">💜</div>
+
+          <h1>Привет</h1>
+
+          <p class="welcome-text">
+            Здесь собраны разные жизненные ситуации и мысли.
+          </p>
+
+          <p class="welcome-text">Нет правильных или неправильных ответов.</p>
+
+          <p class="welcome-text">
+            Выбирай тот вариант, который больше всего подходит тебе.
+          </p>
+
+          <p class="welcome-text">Все ответы сохраняются автоматически.</p>
+
+          <button id="start-btn" class="primary-btn" onclick="render()">Начать</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+      <div class="loading-card">Сохранение...</div>
+    </div>
+
+    <script src="app3.js"></script>
+  </body>
+</html>
