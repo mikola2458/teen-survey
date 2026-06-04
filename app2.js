@@ -5,7 +5,7 @@ const GOOGLE_SCRIPT_URL =
    63 ВОПРОСА
 ========================= */
 
-const questions = 
+const sourceJson = 
 {
   "1": "Я ем сладости и углеводы, не испытывая нервозности.",
   "2": "Я считаю, что мой живот слишком толстый.",
@@ -100,6 +100,11 @@ const questions =
   "91": "Мне кажется, что я не та, кем на самом деле хочу быть."
 };
 
+const questions = Object.entries(sourceJson).map(([number, text]) => ({
+  text,
+  number
+}));
+
 /* =========================
    СОСТОЯНИЕ
 ========================= */
@@ -172,7 +177,7 @@ function render() {
         <circle class="bud" cx="60" cy="45" r="6"/>
     </svg>
 </div>
-                <div class="question-text">${questions[idx]}</div>
+                <div class="question-text">${questions[idx].text}</div>
             </div>
             <div class="answers">
               <button class="answer-btn answer-soft" onclick="answer(1)" data-value="1">😌 Никогда </button>
@@ -191,7 +196,7 @@ function render() {
 ========================= */
 
 function answer(value) {
-    answers[idx] = value;
+    answers[questions[idx].text] = value;
     localStorage.setItem("answers", JSON.stringify(answers));
 
     idx++;
@@ -253,4 +258,4 @@ async function finish() {
    START
 ========================= */
 
-render();
+
