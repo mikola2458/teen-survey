@@ -94,6 +94,8 @@ function getSessionId() {
     if (!id) {
         id = crypto.randomUUID();
         localStorage.setItem("sessionId", id);
+    }else{
+       render();
     }
     return id;
 }
